@@ -25,12 +25,12 @@ const capitalized = string => string[0].toUpperCase() + string.slice(1).toLowerC
 app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
 
 app.use((req,res,next)=>{
-    //el middleware crea una variable para HBS q nos ayuda a saber si el usuario está activo o no
+    
      if(req.session.userConnected === undefined){
-        //el usuario no está activo  
+        
         res.locals.isUserActive =false
     } else {
-        //si está activo
+        
         res.locals.isUserActive =true
     }
     next()

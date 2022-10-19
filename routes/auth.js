@@ -93,7 +93,7 @@ router.post("/login", async (req, res, next) => {
 //redirijo a perfil tras acceso
     req.session.userConnected = foundUser;
     req.session.save(()=>{
-        res.redirect("/profile")
+        res.redirect("/main")
     })
 
 
